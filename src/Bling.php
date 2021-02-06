@@ -3,6 +3,7 @@
 namespace Bling;
 
 use Bling\API\Client;
+use Bling\Repositories\CategorieRepository;
 use Bling\Repositories\CTeRepository;
 use Bling\Repositories\LogisticsRepository;
 use Bling\Repositories\NFCeRepository;
@@ -61,5 +62,10 @@ class Bling {
     public function nfses(): NFSeRepository
     {
         return new NFSeRepository($this->client);
+    }
+
+    public function categories(): CategorieRepository
+    {
+        return new CategorieRepository($this->client);
     }
 }

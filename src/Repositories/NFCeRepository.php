@@ -6,7 +6,7 @@ use Spatie\ArrayToXml\ArrayToXml;
 
 class NFCeRepository extends BaseRepository
 {
-    public function all(array $filters = []): ?array
+    public function all(array $filters = [], int $page=1): ?array
     {
         $options = [];
 

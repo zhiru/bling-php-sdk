@@ -4,7 +4,7 @@ namespace Bling\Repositories;
 
 use Spatie\ArrayToXml\ArrayToXml;
 
-class NFSeRepository extends BaseRepository
+class CategorieRepository extends BaseRepository
 {
     public function all(array $filters = [], int $page=1): ?array
     {
@@ -18,12 +18,12 @@ class NFSeRepository extends BaseRepository
             $options['filters'] = implode('; ', $filters);
         }
 
-        return $this->client->get('notaservico/json/', $options);
+        return $this->client->get('categorias/page='.$page.'/json/', $options);
     }
 
     public function find(int $numero): ?array
     {
-        return $this->client->get("notaservico/$numero/json/");
+        return $this->client->get("categoria/$numero/json/");
     }
 
     public function create(array $params): ?array
@@ -36,16 +36,18 @@ class NFSeRepository extends BaseRepository
 
         $options['xml'] = $xml;
 
-        return $this->client->post('notaservico/json/', $options);
+        return $this->client->post('categoria/json/', $options);
     }
 
-    public function send(int $numero, int $serie): ?array
+    public function send(int $numero, int $categorias, $categoria, $descricao, $idCategoriaPai = false): ?array
     {
         $options = [];
 
-        $options['number'] = $numero;
-        $options['serie'] = $serie;
+        $options['categorias'] = $categorias;
+        $options['categoria'] = $categoria;
+        $options['descricao'] = $descricao;
+        $options['idCategoriaPai'] = $idCategoriaPai;
 
-        return $this->client->post("notaservico/$numero/$serie/json/", $options);
+        return $this->client->post("categoria/$numero/json/", $options);
     }
 }

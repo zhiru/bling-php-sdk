@@ -6,7 +6,7 @@ use Spatie\ArrayToXml\ArrayToXml;
 
 class OrderRepository extends BaseRepository
 {
-    public function all(array $filters = [], bool $historico = false): ?array
+    public function all(array $filters = [], bool $historico = false, int $page=1): ?array
     {
         $options = [];
 

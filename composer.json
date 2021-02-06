@@ -1,5 +1,5 @@
 {
-	"name": "rits-tecnologia/bling-php-sdk",
+	"name": "clembet/bling-php-sdk",
 	"description": "Bling PHP SDK",
 	"keywords": ["bling", "api", "sdk"],
 	"license": "MIT",
@@ -20,7 +20,7 @@
 		}
 	},
 	"require": {
-		"php": "^7.3",
+		"php": "^7.2",
 		"guzzlehttp/guzzle": "^6.5",
 		"spatie/array-to-xml": "^2.11"
 	},

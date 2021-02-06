@@ -1,6 +1,6 @@
 # Bling PHP SDK
 
-This package provides PHP SDK to the Bling API v2 (https://manuais.bling.com.br/manual/?categoria=api-v2&tipo=api).
+This package provides PHP SDK to the Bling API v2 (https://ajuda.bling.com.br/hc/pt-br/categories/360002186394-API-para-Desenvolvedores).
 
 ## Installation
 

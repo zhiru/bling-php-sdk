@@ -7,7 +7,7 @@ This package provides PHP SDK to the Bling API v2 (https://ajuda.bling.com.br/hc
 Install this package with composer.
 
 ```sh
-composer require rits-tecnologia/bling-php-sdk
+composer require clembet/bling-php-sdk
 ```
 
 ## Usage

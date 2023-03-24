@@ -1,12 +1,12 @@
 {
-	"name": "clembet/bling-php-sdk",
+	"name": "zhiru/bling-php-sdk",
 	"description": "Bling PHP SDK",
 	"keywords": ["bling", "api", "sdk"],
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Juciano Araujo",
-			"email": "jucianoaraujo@rits.com.br"
+			"name": "Felipe Almeman",
+			"email": "felipe@aireset.com.br"
 		}
 	],
 	"autoload": {

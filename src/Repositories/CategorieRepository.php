@@ -6,7 +6,7 @@ use Spatie\ArrayToXml\ArrayToXml;
 
 class CategorieRepository extends BaseRepository
 {
-    public function all(array $filters = [], int $page=1): ?array
+    public function all(array $filters = [], int $page = 0): ?array
     {
         $options = [];
 
@@ -18,7 +18,11 @@ class CategorieRepository extends BaseRepository
             $options['filters'] = implode('; ', $filters);
         }
 
-        return $this->client->get('categorias/page='.$page.'/json/', $options);
+        if($page > 0){            
+            return $this->client->get('categorias/page='.$page.'/json/', $options);
+        }
+        
+        return $this->client->get('categorias/json/', $options);
     }
 
     public function find(int $numero): ?array
